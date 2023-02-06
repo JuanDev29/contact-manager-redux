@@ -1,5 +1,6 @@
 export default function PeopleList(props) {
   const arr = props.data;
+  console.log(arr)
   const listItems = arr.map((val, index) =>
     <li key={index}>{val}</li>
   );

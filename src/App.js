@@ -1,18 +1,13 @@
 //import './App.css';
-import AddPersonForm from './components/AddPerson'
-import PeopleList from './components/PeopleList'
+import ContactManager from './components/ContactManager'
 
 const contacts = ["James Smith", "Thomas Anderson", "Bruce Wayne"];
 
 function App() {
   return (
-    <div className="App">
 
-      <AddPersonForm/>
+    <ContactManager data={contacts} />
 
-      <PeopleList data={contacts} />
-
-    </div>
   );
 }
 
