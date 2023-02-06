@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
+import { connect } from 'react-redux'
+import { addPerson } from '../actions/actionCreator'
 
-export default function AddPerson(props) {
+function AddPerson(props) {
   const [ person, setPerson ] = useState("");
 
   function handleChange(e) {
@@ -9,7 +11,7 @@ export default function AddPerson(props) {
 
   function handleSubmit(e) {
     if (person !== '') {
-      props.handleSubmit(person);
+      props.addPerson(person);
       setPerson('');
     }
     e.preventDefault();
@@ -27,3 +29,7 @@ export default function AddPerson(props) {
     </form>
   );
 }
+
+const mapDispatchToProps = { addPerson }
+
+export default connect(null, mapDispatchToProps)(AddPerson)
