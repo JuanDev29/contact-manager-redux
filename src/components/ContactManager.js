@@ -7,12 +7,22 @@ export default function ContactManager(props) {
 
   function addPerson(name) {
     setContacts([...contacts, name]);
-  }  
+  }
+
+  function deletePerson(index) {
+    contacts.splice(index, 1)
+    setContacts([...contacts])
+  }
 
   return (
     <div>
-      <AddPerson handleSubmit={addPerson}/>
-      <PeopleList data={contacts} />
+      <AddPerson 
+        handleSubmit={addPerson}
+      />
+      <PeopleList 
+        handleDelete={deletePerson}
+        data={contacts} 
+      />
     </div>
   );
 } 
