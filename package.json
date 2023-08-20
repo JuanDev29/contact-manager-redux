@@ -1,5 +1,5 @@
 {
-  "name": "contact-manager-react",
+  "name": "contact-manager-redux",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
